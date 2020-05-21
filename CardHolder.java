@@ -1,15 +1,18 @@
+import java.util.List;
 public class CardHolder {
 
     private String name;
     private int age;
-    private boolean checkOut, reserve, overDue;
+    private boolean checkOut, reserve; //overDue;
+    private List<Book> overdueBooks;
+    private List<Periodical> overduePeriodicals;
 
-    public CardHolder(String name, int age, boolean checkOut, boolean reserve, boolean overDue) {
+    public CardHolder(String name, int age, boolean checkOut, boolean reserve) {
         this.name = name;
         this.age = age;
         this.checkOut = checkOut;
         this.reserve = reserve;
-        this.overDue = overDue;
+        // this.overDue = overDue;
     }
 
     // getters
@@ -29,8 +32,14 @@ public class CardHolder {
         return reserve;
     }
 
-    public boolean getOverDue() {
-        return overDue;
+    // public boolean getOverDue() {
+    //     return overDue;
+    // }
+    public List <Book> getOverdueBooks(){
+        return overdueBooks;
+    }
+    public List<Periodical> getOverduePeriodicals(){
+        return overduePeriodicals;
     }
 
     // setters
@@ -50,7 +59,22 @@ public class CardHolder {
         this.reserve = reserve;
     }
 
-    public void setOverDue(boolean overDue) {
-        this.overDue = overDue;
+    // public void setOverDue(boolean overDue) {
+    //     this.overDue = overDue;
+    // }
+    public void setOverdueBooks(List<Book> overdueBooks){
+        this.overdueBooks = overdueBooks;
+    }
+
+    public void setOverduePeriodicals(List<Periodical> overduePeriodicals){
+        this.overduePeriodicals = overduePeriodicals;
+    }
+
+    public void addOverdueBooks(Book book){
+        overdueBooks.add(book);
+    }
+    
+    public void addOverduePeriodicals(Periodical periodical){
+        overduePeriodicals.add(periodical);
     }
 }

@@ -2,7 +2,7 @@ public class Periodical extends LibraryItem{
     
     private int releaseDate;
 
-    public Periodical(String titles, String authors, int bookTotal, int releaseDate){
+    public Periodical(String titles, Authors authors, int bookTotal, int releaseDate){
         super(titles, authors, bookTotal);
         this.releaseDate = releaseDate;
     }

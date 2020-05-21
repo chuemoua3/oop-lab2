@@ -3,7 +3,7 @@ public class Book extends LibraryItem {
     private int pages;
     private String genre;
 
-    public Book(String titles, String authors, int pages, int bookTotal, String genre) {
+    public Book(String titles, Authors authors, int pages, int bookTotal, String genre) {
         super(titles, authors, bookTotal);
         this.pages = pages;
         this.genre = genre;

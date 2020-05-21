@@ -1,9 +1,10 @@
 public class LibraryItem {
 
-    private String titles, authors;
+    private String titles;
+    private Authors authors;
     private int bookTotal;
 
-    public LibraryItem(String titles, String authors, int bookTotal) {
+    public LibraryItem(String titles, Authors authors, int bookTotal) {
         this.titles = titles;
         this.authors = authors;
         this.bookTotal = bookTotal;
@@ -15,7 +16,7 @@ public class LibraryItem {
         return titles;
     }
 
-    public String getAuthors() {
+    public Authors getAuthors() {
         return authors;
     }
 
@@ -28,7 +29,7 @@ public class LibraryItem {
         this.titles = titles;
     }
 
-    public void setAuthor(String authors) {
+    public void setAuthor(Authors authors) {
         this.authors = authors;
     }
 
