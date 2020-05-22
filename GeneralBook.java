@@ -17,8 +17,8 @@ public class GeneralBook extends Book implements Loanable{
     }
 
     @Override
-    public Schedule feeSchedule() {
+    public ChargeSchedule feeSchedule() {
         // TODO Auto-generated method stub
-        return Schedule.WEEKLY;
+        return ChargeSchedule.WEEKLY;
     }
 }
